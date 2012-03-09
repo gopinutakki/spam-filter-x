@@ -42,11 +42,11 @@ public class SpamClassifier {
 		FastVector trainingSet, testingSet;
 		SpamClassifier classifier = new SpamClassifier();
 
-		classifier.createTrainingSet(dataset+"\\training");
-		classifier.createTestingSet(dataset+"\\training");
-		
+		classifier.createTrainingSet(dataset + "\\training");
+		classifier.createTestingSet(dataset + "\\training");
+
 		classifier.classifierNaiveBayes();
-		//this.classifierJ48();		
+		// this.classifierJ48();
 	}
 
 	private void createTestingSet(String dataset) throws IOException {
@@ -63,10 +63,10 @@ public class SpamClassifier {
 
 		testingSet = new Instances("SpamClsfyTraining", records, 40);
 		testingSet.setClassIndex(0);
-		
+
 		this.readTestingDataset(dataset);
 	}
-	
+
 	private void createTrainingSet(String dataset) throws Exception {
 		emailMessage = new Attribute("emailMessage", (FastVector) null);
 		emailClass = new FastVector(3);
@@ -81,25 +81,28 @@ public class SpamClassifier {
 
 		trainingSet = new Instances("SpamClsfyTraining", records, 40);
 		trainingSet.setClassIndex(0);
-		
+
 		this.readTrainingDataset(dataset);
 	}
 
 	private void classifierNaiveBayes() throws Exception {
 
-		StringToWordVector stringToVector = new StringToWordVector();
+		StringToWordVector stringToVector = new StringToWordVector(1000);
 		stringToVector.setInputFormat(trainingSet);
+		stringToVector.setUseStoplist(true);
 		Instances filteredData = Filter.useFilter(trainingSet, stringToVector);
-		Instances filteredTestData = Filter.useFilter(testingSet, stringToVector);
+		Instances filteredTestData = Filter.useFilter(testingSet,
+				stringToVector);
+
 		
 		Classifier cModel = (Classifier) new NaiveBayes();
 		cModel.buildClassifier(filteredData);
-
+		
+		
 		Evaluation eTest = new Evaluation(filteredTestData);
 		eTest.evaluateModel(cModel, filteredTestData);
-
 		System.out.println("==== Naive Bayes ===" + eTest.toSummaryString());
-		
+		System.out.println(testingSet.instance(1));
 	}
 
 	private void classifierJ48() throws Exception {
@@ -150,7 +153,7 @@ public class SpamClassifier {
 			testingSet.add(rec);
 		}
 	}
-	
+
 	private String readFileAsString(String filePath) throws IOException {
 		byte[] buffer = new byte[(int) new File(filePath).length()];
 		BufferedInputStream f = null;
@@ -177,7 +180,7 @@ public class SpamClassifier {
 			} else
 				fileNames.add(files[loop].getAbsolutePath());
 		}
-		Collections.shuffle(fileNames);
+		//Collections.shuffle(fileNames);
 		return fileNames;
 	}
 }
