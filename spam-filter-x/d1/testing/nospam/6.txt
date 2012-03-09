@@ -1,0 +1,12 @@
+Hi bhaya...
+
+Nina surf chesthunte i found something, Adi oka API to interact with google search.JAVA Api idi.
+
+Also there are some test files used for demo.
+
+I tried to extract the files in that jar file and tried to run it as a netbeans project, but i think i messed up placing files.
+
+Can u look at it once and can u convert it to a netbeans project, where i can show those test files to Wang when asked for Demo..:P
+
+Here is the link
+http://gsa-japi.sourceforge.net/complete-tut.html

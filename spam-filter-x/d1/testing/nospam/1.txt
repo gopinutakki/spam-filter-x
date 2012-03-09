@@ -1,0 +1,7 @@
+Today we’re very excited to announce the launch of Dolphin Sonar, the latest invention at Dolphin using voice control. Just shake your phone and tell Dolphin to:  
+ 
+Search the Web, and find websites or search results
+Search eBay, and start shopping
+Facebook someone, and find the exact person you are looking for
+Bookmark, and save your favorite sites for later
+Navigate, and breeze through your browser. And much more! 
