@@ -32,7 +32,7 @@ public class SpamClassifier {
 	static FastVector emailClass;
 	static Attribute eClass;
 	static FastVector records;
-	static Instances isTrainingSet;
+	static Instances trainingSet;
 
 	public static void main(String args[]) throws Exception {
 		String dataset = "d1";
@@ -62,8 +62,8 @@ public class SpamClassifier {
 		records.addElement(eClass);
 		records.addElement(emailMessage);
 
-		isTrainingSet = new Instances("SpamClsfyTraining", records, 40);
-		isTrainingSet.setClassIndex(0);
+		trainingSet = new Instances("SpamClsfyTraining", records, 40);
+		trainingSet.setClassIndex(0);
 
 		this.readDataset(dataset);
 		this.NaiveBayesClassifier();
@@ -73,9 +73,9 @@ public class SpamClassifier {
 	private void NaiveBayesClassifier() throws Exception {
 
 		StringToWordVector stringToVector = new StringToWordVector();
-		stringToVector.setInputFormat(isTrainingSet);
+		stringToVector.setInputFormat(trainingSet);
 		Instances filteredData = Filter
-				.useFilter(isTrainingSet, stringToVector);
+				.useFilter(trainingSet, stringToVector);
 
 		Classifier cModel = (Classifier) new NaiveBayes();
 		cModel.buildClassifier(filteredData);
@@ -99,7 +99,7 @@ public class SpamClassifier {
 			} else
 				rec.setValue((Attribute) records.elementAt(0), "spam");
 			rec.setValue((Attribute) records.elementAt(1), data);
-			isTrainingSet.add(rec);
+			trainingSet.add(rec);
 		}
 	}
 
