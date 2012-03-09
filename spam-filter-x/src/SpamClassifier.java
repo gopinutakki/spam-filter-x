@@ -1,3 +1,14 @@
+/**
+ * 
+ * Spam Classifier. Assignment 4. Dr. Olfa Nasraoui CECS 621. University of
+ * Louisville
+ * 
+ * @author Gopi Chand Nutakki
+ * @license GPLv3
+ * 
+ * @date March 9 2012
+ */
+
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -8,23 +19,13 @@ import java.util.Collections;
 import weka.classifiers.Classifier;
 import weka.classifiers.Evaluation;
 import weka.classifiers.bayes.NaiveBayes;
+import weka.classifiers.trees.J48;
 import weka.core.Attribute;
 import weka.core.FastVector;
 import weka.core.Instance;
 import weka.core.Instances;
 import weka.filters.Filter;
 import weka.filters.unsupervised.attribute.StringToWordVector;
-
-/**
- * 
- * Spam Classifier. Assignment 4. Dr. Olfa Nasraoui CECS 621. University of
- * Louisville
- * 
- * @author Gopi Chand Nutakki
- * @license GPLv3
- * 
- *          March 9 2012
- */
 
 public class SpamClassifier {
 
@@ -66,16 +67,16 @@ public class SpamClassifier {
 		trainingSet.setClassIndex(0);
 
 		this.readDataset(dataset);
-		this.NaiveBayesClassifier();
+		this.classifierNaiveBayes();
+		this.classifierJ48();
 		return records;
 	}
 
-	private void NaiveBayesClassifier() throws Exception {
+	private void classifierNaiveBayes() throws Exception {
 
 		StringToWordVector stringToVector = new StringToWordVector();
 		stringToVector.setInputFormat(trainingSet);
-		Instances filteredData = Filter
-				.useFilter(trainingSet, stringToVector);
+		Instances filteredData = Filter.useFilter(trainingSet, stringToVector);
 
 		Classifier cModel = (Classifier) new NaiveBayes();
 		cModel.buildClassifier(filteredData);
@@ -83,7 +84,22 @@ public class SpamClassifier {
 		Evaluation eTest = new Evaluation(filteredData);
 		eTest.evaluateModel(cModel, filteredData);
 
-		System.out.println(eTest.toSummaryString());
+		System.out.println("==== Naive Bayes ===" + eTest.toSummaryString());
+	}
+
+	private void classifierJ48() throws Exception {
+
+		StringToWordVector stringToVector = new StringToWordVector();
+		stringToVector.setInputFormat(trainingSet);
+		Instances filteredData = Filter.useFilter(trainingSet, stringToVector);
+
+		Classifier cModel = (Classifier) new J48();
+		cModel.buildClassifier(filteredData);
+
+		Evaluation eTest = new Evaluation(filteredData);
+		eTest.evaluateModel(cModel, filteredData);
+
+		System.out.println("==== J48 ===" + eTest.toSummaryString());
 	}
 
 	private void readDataset(String dataset) throws IOException {
