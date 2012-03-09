@@ -1,0 +1,26 @@
+Dear Google Account holder:
+
+2-step verification was turned off for your account. We are sorry to
+see you go. If you did not turn off 2-step, or want to turn 2-step
+verification back on, visit:
+https://www.google.com/accounts/SmsAuthConfig
+
+If you have turned off 2-step verification because your phone or
+applications could no longer access your Google Account, learn how to
+fix these by using application-specific passwords:
+http://www.google.com/support/accounts/bin/answer.py?answer=185833
+
+Now that you've turned off 2-step verification, revoke any
+application-specific passwords you created to authorize applications
+and devices to access your Google Account. To revoke
+application-specific passwords, visit:
+https://www.google.com/accounts/IssuedAuthSubTokens
+
+If you have any suggestions for how we can improve 2-step
+verification, please let us know:
+http://www.google.com/support/accounts/bin/request.py?contact_type=2step_feedback
+
+
+If you have questions about how 2-step verification works or want information about additional
+steps to keep your account secure, you can learn more at the Help Center:
+http://www.google.com/support/accounts/bin/answer.py?answer=180744&hl=en
