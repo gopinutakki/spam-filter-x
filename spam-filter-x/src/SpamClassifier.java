@@ -1,6 +1,8 @@
 /**
   * Gopi Chand Nutakki
   * Spam Filter Assignment, CECS UofL
+  * Friday March 9 2012.
+  * 
   * 
   * This is just a modified code.
   * Original Author:
