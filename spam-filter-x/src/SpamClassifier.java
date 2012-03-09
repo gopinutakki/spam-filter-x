@@ -1,5 +1,10 @@
 /**
-  *
+  * Gopi Chand Nutakki
+  * Spam Filter Assignment, CECS UofL
+  * 
+  * This is just a modified code.
+  * Original Author:
+  * 
   * Sun Mar 30 19:47:00 2003/hakank@bonetmail.com
   *
   * Implementing a text classifier. For use with Applet.
