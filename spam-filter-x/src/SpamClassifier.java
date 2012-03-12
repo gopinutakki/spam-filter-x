@@ -111,11 +111,10 @@ public class SpamClassifier {
 		Evaluation eTest = new Evaluation(filteredTestData);
 		eTest.evaluateModel(cModel, filteredTestData);
 		System.out.println("==== Naive Bayes ===");
-		System.out.println(eTest.toString());
-		System.out.println(eTest.toSummaryString());
+		System.out.println(eTest.toSummaryString(true));
 		System.out.println(eTest.toClassDetailsString());
 		System.out.println(eTest.toMatrixString());
-		
+		System.out.println(eTest.toCumulativeMarginDistributionString());	
 	}
 
 	private void classifierNaiveBayesUpdatable() throws Exception {
