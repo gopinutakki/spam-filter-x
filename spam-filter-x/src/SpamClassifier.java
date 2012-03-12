@@ -1,7 +1,7 @@
 /**
  * 
- * Spam Classifier. Assignment 4. Dr. Olfa Nasraoui CECS 621. University of
- * Louisville
+ * Spam Classifier. Assignment 4.
+ * Dr. Olfa Nasraoui CECS 621. University of Louisville
  * 
  * @author Gopi Chand Nutakki
  * @license GPLv3
