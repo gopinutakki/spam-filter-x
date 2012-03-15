@@ -19,6 +19,7 @@ import java.util.Collections;
 import weka.classifiers.Classifier;
 import weka.classifiers.Evaluation;
 import weka.classifiers.bayes.NaiveBayes;
+import weka.classifiers.bayes.NaiveBayesMultinomial;
 import weka.classifiers.trees.J48;
 import weka.core.Attribute;
 import weka.core.FastVector;
@@ -47,6 +48,7 @@ public class SpamClassifier {
 
 		classifier.performClassification(new NaiveBayes(), "NAIVE BAYES");
 		classifier.performClassification(new J48(), "J48 (C4.5)");
+		classifier.performClassification(new NaiveBayesMultinomial(), "NAIVE BAYES MULTINOMIAL");
 	}
 
 	private void createTestingSet(String dataset) throws IOException {
