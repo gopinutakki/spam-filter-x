@@ -38,7 +38,10 @@ public class SpamClassifier {
 	static Instances trainingSet;
 	static Instances testingSet;
 	static Instances evaluationSet;
-
+	
+	/*
+	 * Begin here....
+	 */
 	public static void main(String args[]) throws Exception {
 		String dataset = "d2a";
 		FastVector trainingSet, testingSet;
@@ -47,10 +50,14 @@ public class SpamClassifier {
 		classifier.createTestingSet(dataset + "\\testing");
 
 		classifier.performClassification(new NaiveBayes(), "NAIVE BAYES");
+		// Other algorithms
 		classifier.performClassification(new J48(), "J48 (C4.5)");
 		classifier.performClassification(new NaiveBayesMultinomial(), "NAIVE BAYES MULTINOMIAL");
 	}
 
+	/*
+	 * Create the ARFF files from the dataset (in .txt files.)
+	 */
 	private void createTestingSet(String dataset) throws IOException {
 		emailMessage = new Attribute("emailMessage", (FastVector) null);
 		emailClass = new FastVector(3);
@@ -97,6 +104,12 @@ public class SpamClassifier {
 		saver.writeBatch();
 	}
 
+	/**
+	 * Create the classification model and perform the classification.
+	 * @param model
+	 * @param modelName
+	 * @throws Exception
+	 */
 	private void performClassification(Object model, String modelName) throws Exception {
 		System.out.println("**==" + modelName + "==**");
 		StringToWordVector stringToVector = new StringToWordVector(1000);
@@ -119,6 +132,11 @@ public class SpamClassifier {
 		System.out.println(eTest.toMatrixString());
 	}
 	
+	/**
+	 * Reading the .txt files containing the data.
+	 * @param dataset
+	 * @throws IOException
+	 */
 	private void readTrainingDataset(String dataset) throws IOException {
 
 		ArrayList<String> fileNames = new ArrayList<String>();
@@ -153,6 +171,9 @@ public class SpamClassifier {
 		}
 	}
 
+	/*
+	 * Read each file as String, and add it to the dataset.
+	 */
 	private String readFileAsString(String filePath) throws IOException {
 		byte[] buffer = new byte[(int) new File(filePath).length()];
 		BufferedInputStream f = null;
@@ -169,6 +190,9 @@ public class SpamClassifier {
 		return new String(buffer);
 	}
 
+	/*
+	 * Listing files in a directory, the files contain the data.
+	 */
 	private ArrayList<String> listFiles(String path, ArrayList<String> fileNames) {
 		File dir = new File(path);
 		File[] files = dir.listFiles();
