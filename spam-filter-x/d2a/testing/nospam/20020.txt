@@ -1,0 +1,20 @@
+Hello Gopi, this is Charles and my partner is Kevin. We are really
+behind in our robot project and we could really use your help. We are
+basically trying to have one of our robots communicate with the other by
+distance. We want robot1 to move forward if and only if robot2 is close
+to it. I believe this needs wifi am I correct? Is this possible?
+Next if we can get that to work, we then want use Strabo so that the two
+robots will know the dimensions of the room and where all of the objects
+are. With this knowledge, robot1 will then "run away" from robot2 until
+it is caught while robot2 will "chase" robot1 until it catches it. Think
+of two children running after each other in a room until one catches the
+other.
+So again:
+1.)Make robot1 move when robot2 is close to it
+2.)Make robot1 change direction in the room that will keep it from being
+caught
+3.)Make robot2 chase after robot1
+4.)Make both robots stop when robot2 touches robot1
+Is this possible and can you help us please.
+Please feel free to call me at any time on my cell 615 491 8053
+And can you give me your cell number as well? THANK YOU!

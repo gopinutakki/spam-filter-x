@@ -40,7 +40,7 @@ public class SpamClassifier {
 	static Instances evaluationSet;
 
 	public static void main(String args[]) throws Exception {
-		String dataset = "d1a";
+		String dataset = "d2a";
 		FastVector trainingSet, testingSet;
 		SpamClassifier classifier = new SpamClassifier();
 		classifier.createTrainingSet(dataset + "\\training");

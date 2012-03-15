@@ -1,0 +1,7 @@
+Hey,
+
+I believe I wrote most of the program, but I couldnt test it as the systems have the firewall enabled, I cant disable them.
+The attached zip file contains an eclipse project(can be directly imported into netbeans).
+
+The host names in the a.dat files should be real names of the computers.
+I am not sure whether I would be able to work on the tonight or tomorrow. Show it someone and ask them to execute and may be rewrite the parts thats not working.
