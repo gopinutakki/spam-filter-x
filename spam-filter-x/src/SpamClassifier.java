@@ -1,7 +1,7 @@
 /**
  * 
  * Spam Classifier. Assignment 4.
- * Dr. Olfa Nasraoui CECS 621. University of Louisville
+ * Dr. Olfa Nasraoui. CECS 621. University of Louisville.
  * 
  * @author Gopi Chand Nutakki
  * @license GPLv3
@@ -19,7 +19,6 @@ import java.util.Collections;
 import weka.classifiers.Classifier;
 import weka.classifiers.Evaluation;
 import weka.classifiers.bayes.NaiveBayes;
-import weka.classifiers.bayes.NaiveBayesUpdateable;
 import weka.classifiers.trees.J48;
 import weka.core.Attribute;
 import weka.core.FastVector;
@@ -46,8 +45,8 @@ public class SpamClassifier {
 		classifier.createTrainingSet(dataset + "\\training");
 		classifier.createTestingSet(dataset + "\\testing");
 
-		classifier.classifierNaiveBayes();
-		//classifier.classifierJ48();
+		classifier.performClassification(new NaiveBayes(), "NAIVE BAYES");
+		classifier.performClassification(new J48(), "J48 (C4.5)");
 	}
 
 	private void createTestingSet(String dataset) throws IOException {
@@ -96,8 +95,8 @@ public class SpamClassifier {
 		saver.writeBatch();
 	}
 
-	private void classifierNaiveBayes() throws Exception {
-
+	private void performClassification(Object model, String modelName) throws Exception {
+		System.out.println("**==" + modelName + "==**");
 		StringToWordVector stringToVector = new StringToWordVector(1000);
 		stringToVector.setInputFormat(trainingSet);
 		stringToVector.setUseStoplist(false);
@@ -105,53 +104,18 @@ public class SpamClassifier {
 		Instances filteredTestData = Filter.useFilter(testingSet,
 				stringToVector);
 
-		Classifier cModel = (Classifier) new NaiveBayes();
+		// Classifier cModel = (Classifier) new NaiveBayes();
+		Classifier cModel = (Classifier) model;
 		cModel.buildClassifier(filteredData);
+		System.out.println(cModel);
 
 		Evaluation eTest = new Evaluation(filteredTestData);
 		eTest.evaluateModel(cModel, filteredTestData);
-		System.out.println("==== Naive Bayes ===");
 		System.out.println(eTest.toSummaryString(true));
 		System.out.println(eTest.toClassDetailsString());
 		System.out.println(eTest.toMatrixString());
-		System.out.println(eTest.toCumulativeMarginDistributionString());	
 	}
-
-	private void classifierNaiveBayesUpdatable() throws Exception {
-
-		StringToWordVector stringToVector = new StringToWordVector(1000);
-		stringToVector.setInputFormat(trainingSet);
-		stringToVector.setUseStoplist(false);
-		Instances filteredData = Filter.useFilter(trainingSet, stringToVector);
-		Instances filteredTestData = Filter.useFilter(testingSet,
-				stringToVector);
-
-		Classifier cModel = (Classifier) new NaiveBayesUpdateable();
-
-		cModel.buildClassifier(filteredData);
-
-		Evaluation eTest = new Evaluation(filteredTestData);
-		eTest.evaluateModel(cModel, filteredTestData);
-		System.out.println("==== Naive Bayes ===" + eTest.toSummaryString());
-	}
-
-	private void classifierJ48() throws Exception {
-
-		StringToWordVector stringToVector = new StringToWordVector(1000);
-		stringToVector.setInputFormat(trainingSet);
-		stringToVector.setUseStoplist(false);
-		Instances filteredData = Filter.useFilter(trainingSet, stringToVector);
-		Instances filteredTestData = Filter.useFilter(testingSet,
-				stringToVector);
-
-		Classifier cModel = (Classifier) new J48();
-		cModel.buildClassifier(filteredData);
-
-		Evaluation eTest = new Evaluation(filteredTestData);
-		eTest.evaluateModel(cModel, filteredTestData);
-		System.out.println("==== J48 ===" + eTest.toSummaryString());
-	}
-
+	
 	private void readTrainingDataset(String dataset) throws IOException {
 
 		ArrayList<String> fileNames = new ArrayList<String>();

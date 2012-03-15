@@ -1,24 +1,5 @@
-Hi gopi.nutakki@gmail.com,
+Hi!
 
-Thank you for creating an OpenDNS account! You're one step closer to a safer, faster, smarter and more reliable Internet.
+  Find the attached Doc. of Quantitative Aptitude MATERIAL.
 
-The next thing you should do is add a network to your account. It's easy — just log in to your account and select Networks in your Dashboard. Once you do that, you can:
-
- 
-	Set your filtering preferences.
-Want to block social networks like MySpace and Facebook or bandwidth-consuming sites like YouTube? Just go to Settings in your dashboard and choose "content filtering."
- 
- 
-	Customize with your image and messages.
-Everyone on your network will see them. Just go to Settings and set "your logo" and "your messages" under Customization.
- 
- 
-	View stats about your network activity.
-Want to see which Web sites people on your network are visiting? Block problem sites in a single click? Just visit the Stats tab. (Note: it takes 24 hours for your stats to populate. Don't worry — they're coming!)
- 
- 
-... And much more!
-
-Also, don't forget to download the IP Updater client (for Windows and Mac OS X) after you add a network. You only need to download it on your (the account holder) machine, and it will ensure your settings remain in effect if your IP changes.
-
-If you have questions as you get started with OpenDNS, check our Common Questions, or contact our all-star support team.
+Regards

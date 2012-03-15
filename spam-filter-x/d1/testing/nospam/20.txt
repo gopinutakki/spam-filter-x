@@ -1,16 +1,20 @@
-Thank you for joining Nutrition Center #4 Reward's program. This email notice is to confirm the address you gave us for your Reward Account. You will only receive special Email Rewards from us when you Confirm Your Subscription. Please confirm your email address now by clicking the red Confirm button OR cut and paste the following link into your browser.Please confirm your email address now! 
-
-http://www.nutritioncenter4.com/cfm.asp?g=d234a43f9cfa452a97ed21076bf35ba6
-CONFIRM YOUR REWARD EMAIL SUBSCRIPTION
- 
-
-When you confirm your Email address, you will be able to receive notice of your Rewards and other special offers sent to this email address. Your privacy is assured; we do not sell, rent, share or give away our Reward member email addresses. You will ONLY receive these exclusive offers after you confirm your subscription. Please confirm your email address now!
-CONFIRM YOUR REWARD EMAIL SUBSCRIPTION
-After you confirm your Email address, you will be able to set up your own private online Account, where you will be able to view your Points and Rewards. When you click the red confirm button, you will be taken to a page on our website that lets you enter your Card number, enter your confirmed email address, and set a password. Just follow the instructions on the web page after you confirm your address. Please confirm your email subscription now!
-CONFIRM YOUR REWARD EMAIL SUBSCRIPTION
-You may change the subscriptions in your Account under the Change Email Subscription Preferences. To set up your Account, click the Confirmation below and follow the instructions to set up your Reward Account.
-CONFIRM YOUR REWARD EMAIL SUBSCRIPTION
-
-You may change your email address or request to be unsubscribed to our Reward Emails by contacting our store at info@nutritioncenter4.com. We promise that we will never sell or give away your email address and other personal information. 
-
-Make sure you receive our email in your Inbox and not your Junk folder. Please add info@nutritioncenter4.com to your safe senders list. 
+Hello Gopi, this is Charles and my partner is Kevin. We are really
+behind in our robot project and we could really use your help. We are
+basically trying to have one of our robots communicate with the other by
+distance. We want robot1 to move forward if and only if robot2 is close
+to it. I believe this needs wifi am I correct? Is this possible?
+Next if we can get that to work, we then want use Strabo so that the two
+robots will know the dimensions of the room and where all of the objects
+are. With this knowledge, robot1 will then "run away" from robot2 until
+it is caught while robot2 will "chase" robot1 until it catches it. Think
+of two children running after each other in a room until one catches the
+other.
+So again:
+1.)Make robot1 move when robot2 is close to it
+2.)Make robot1 change direction in the room that will keep it from being
+caught
+3.)Make robot2 chase after robot1
+4.)Make both robots stop when robot2 touches robot1
+Is this possible and can you help us please.
+Please feel free to call me at any time on my cell 615 491 8053
+And can you give me your cell number as well? THANK YOU!

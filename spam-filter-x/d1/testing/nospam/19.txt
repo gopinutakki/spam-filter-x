@@ -1,65 +1,7 @@
-Turn Your Phone into a Universal Media Hub to Play Your Music, Photos, and Videos, Anytime, Anywhere
+Hey,
 
+I believe I wrote most of the program, but I couldnt test it as the systems have the firewall enabled, I cant disable them.
+The attached zip file contains an eclipse project(can be directly imported into netbeans).
 
-
-
-
-
-By Alan Henry
-Your phone is already the center of your digital life—it keeps your in touch with friends and family, it's the camera you keep in your pocket, and it's the music and video player you can pull out for entertainment whenever you're bored. Let's take your phone and all of the media you have on it to the next level. Let's turn that phone into a jukebox full of music, movies, and photos that you can play on almost any TV, stereo system, computer, or other device you may come across, whether you're moving from the living room to your bedroom or your house to a friend's place. The technology is already built into your phone and the gear you have at home; all you need to do is unlock it. Here's how.
-
-Nearly every television, router, smartphone, AV receiver, Blu-ray player, and any other electronic appliance in your home with network capability sold in the past few years supports DLNA or UPnP. We'll explain those in more detail later, but the important thing is that this technology, which is probably already available on some of your devices, gives you the ability to connect anything on a network with media to anything else on the same network that can play it.
-
-We'll walk you through how you can use your iOS or Android device as the media source that you always have in your pocket—full of music, movies, web video, photos, and more—and play that media on any device in any room, without cables, syncing, or a computer in the middle. All you need is an app or two and the right gear. Let's get started.
-
-What You'll Need
-
-There are a few prerequisites to make this work.
-
- An iOS or Android smartphone, full of music, movies, or photos (or even web video and streamimg music)
-A home network that your smartphone can connect to via Wi-Fi
-A DLNA or UPnP-compatible television, home stereo, Blu-ray player, computer or media center app, Apple TV or set-top box, or any other home electronics appliance that connect to your home network, either wired or via Wi-Fi. Click here to see if your electronics are DLNA compliant, and click here to see if they're UPnP compliant.
-A DLNA/UPnP-compliant player for your smartphone that can stream your media to your electronics. We chose Twonky for iOS and Android.
-Before you get started, keep in mind that this will only work with devices that are connected to your home network. If your TV isn't connected, you'll need something connected to your TV that is—for example, a set-top box, HTPC, or even a DLNA-compliant Blu-ray player. Odds are you have at least one appliance connected to your home theater setup or living room TV that's compatible.
-
-When I set this up myself, I was dismayed to learn that many of my electronics weren't supported. My reciever was too old, my TV wasn't connected to my home network, and the Xbox 360 uses a Microsoft-proprietary version of DLNA that doesn't play well with others. However, if you have an Apple TV, PlayStation 3, anything running XBMC, a relatively new Blu-Ray player or receiver, or almost any other set-top box or network-connected stereo, you're probably already set. Take a look again at the DLNA product search and UPnP product search to see if any of your gear is compatible.
-
-Step One: Install and Set up Twonky Mobile
-
-We chose Twonky Mobile for a couple of reasons. First, it's available to iOS and Android users, uses the same interface, and offers the same features to both types of devices. Apple users have the benefit of AirPlay (which we'll get to a little later) but using Twonky allows you to leverage apps that aren't AirPlay compatible and push to devices that don't support AirPlay. Oh, and did we mention Twonky is completely free?
-
-To get started, grab Twonky Mobile from the iTunes App Store or the Android App Market. Once installed, fire up the app and let it scan your home network. It'll display the name of the network it's connected to, and then ask you to select a server. Any open media library will be shown here, including any computers on your network with Windows Media Center running, but go ahead and select your phone (listed as "TwonkyServer Mobile") from the list of available media libraries.
-
-The app will then ask you to select a "player," or a compatible device it should use to show your photos and videos or play your music. If you don't see anything in the list yet, that's okay, but if your set-top box, XBMC system, internet-connected TV, or other compatible gear is powered on and connected to your home network, you may already see it.
-
-
-
-Step Two: Choose Your Player
-
-If the player you want to use isn't in the list, it's either not powered on, not currently connected, or it's not DLNA or UPnP compliant. If you don't see your TV in the list, for example, power on your Blu-ray player, receiver, or set-top box and re-scan to see if it shows up and use that instead. When you move to another room, make sure your stereo is connected to your home network and turn it on—if it's DLNA compliant, it'll show up in the list as well. Go ahead and choose the player you want to use.
-
-As you move from room to room, or even go over to a friend's house, you'll need to re-scan for available devices. It's a little annoying, but the only way to make sure they're always in the list is to either keep them on all the time, or power them on before you start up Twonky. Once they're available to select, playing your media is just a tap away.
-
-In my experience, Twonky does a great job of scouring your home network for available players—a job that other tools I tried didn't do quite so well at. I was surprised to see my Apple TV in the list on my Android phone, and my XBMC-enabled HTPC in the list just because the system was on and XBMC was currently running.
-
-
-
-Step Three: Press Play
-
-One of the other reasons we chose Twonky for this is because once you've selected your library and your player, the app then allows you to immediately select what you want to stream from your phone to your player. I sat on the couch in front of my TV and started playing music from my phone on my HTPC without so much as lifting a finger to configure XBMC to allow that to happen. The same was true when I went into the bedroom and turned on my Apple TV—I just told Twonky to select the Apple TV as a player, queued up a couple of songs, and pressed play.
-
-If you don't want to be confined to the media on your phone, Twonky inserts itself into the iOS and Android "share" menus, so if you're viewing a photo in your gallery or camera roll, you can "share" it with Twonky to display it on the big screen, or if you're listening to a podcast you can share it with Twonky to play it on your stereo or through your Blu-ray player to your television.
-
-I had a good experience with Twonky here, but it's definitely not perfect. There were some instances where a video I wanted to play just wouldn't work—specifically streaming from my Android phone to my Apple TV,, and there were time when we wanted to play a single video or view a single photo and Twonky started queuing our entire photo or video library. Even so, most of the issues were fixed by choosing media types that would actually play, and by restarting the Twonky app so we could get a fresh start. Since there's nothing you can do to troubleshoot the player and you're limited to the controls in the Twonky Mobile app on your Android or iOS device, you may feel like you don't have enough control over what the app does. Be patient, and don't be afraid to just turn it off, turn it back on, and try again.
-
-AirPlay and Other Options
-
-If all of your gadget are somehow connected to Apple devices, you may not even need Twonky. AirPlay offers a seamless, integrated method to stream music, video, and just about anything else from your iPhone, iPod Touch, or iPad to any other iOS device, like an Apple TV or an Apple computer. Going the DLNA route however allows you to stream media from apps that don't have AirPlay support to devices that may not be AirPlay compatible. However, if all of your TVs are connected to Apple TVs, and your handhelds are iOS devices, you can accomplish most of this without an additional app. Still, if you're stuck with an app that doesn't support AirPlay and want to share it, you can try this hack we shared a while ago to at least get the audio going.
-
-Android users on the other hand have a wealth of alternatives, but not all of them are polished. I tried the previously mentioned Skifta, which has a lot more polish (and handled play/pause/queuing songs much more smoothly) and offers some cloud-streaming features that Twonky doesn't, but found that Skifta had more difficulty finding compatible devices on my network than Twonky did, and even though Skifta claims some XBox 360 support (and indeed, shows it as a player in the app,) it doesn't work at all. Skifta also won't support the Apple TV. Still, Skifta worked seamlessly with my Blu-ray player and XBMC devices, and supported more file types than Twonky did, so it's a great alternative if Twonky doesn't work for you, or you're looking for another tool.
-
-There are tons of apps in the Android market that allow you to pull media from other sources on your home network to your Android phone instead of push media from your Android phone to another player, but Twonky and Skifta are some of the few that allow you to do both whenever you choose.
-
-Go Forth and Stream
-
-There are dozens of ways to pull media from your media library on your laptop, or your movie collection on your home computer to your Android or iOS device and enjoy it on the go. We've discussed several methods for this in the past. Even so, there's something great about being able to go to a friend's house, talk about a video you saw or a song you heard, and instead of have everyone crowd around your tiny phone screen, just push the video to their TV, or play the song on their stereo for everyone to hear. There's also nothing like being able to walk into my bedroom, turn on my phone, and continue the music I was just listening to in the living room with a couple of taps. The best part of all of this is that the technology is already in your pocket, and probably already in your house—you just have to take advantage of it.
+The host names in the a.dat files should be real names of the computers.
+I am not sure whether I would be able to work on the tonight or tomorrow. Show it someone and ask them to execute and may be rewrite the parts thats not working.

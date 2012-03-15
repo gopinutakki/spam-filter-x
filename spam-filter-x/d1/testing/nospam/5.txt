@@ -1,30 +1,75 @@
-The last processing action taken on your case
+LinuxBasics Course
 
+An Introduction to Linux Basics
 
-Receipt Number: WAC1123751289
+LinuxBasic.org offers our second free Linux class, An Introduction to
+Linux Basics.
 
+Linux can certainly be used as a Desktop without much understanding of
+how it works. This course is designed to give a foundation of
+understanding of Linux to a beginner who wants to know a little more
+about the system. More advanced Linux users will find an opportunity
+to dig deeper into some areas they always wanted to know more about or
+discover gaps in their knowledge that they didn't know existed.
 
-Application Type: I129 , PETITION FOR A NONIMMIGRANT WORKER
+We will use LBook, our own edited version of "Introduction to Linux: A
+Hands on Guide" by Machtelt Garrels, as a study guide. We are excited
+about using this guide which is under the GNU Free Documentation
+License–meaning we can revise it. As we study this guide, we will
+update it together. We also intend to make an Answer Key for the
+exercises in the guide.
 
+Our heartfelt thanks go to Machtelt Garrels for creating the original
+guide and also to you who will join us in studying and revising it for
+the LinuxBasics.org community.
 
-Your Case Status: Decision
+When, Where, How, and How Long
 
+The class is set to begin on October 19, 2006. There 11 chapters and
+an Intro in the guide. We will spend more than a week on most chapters
+and anticipate the class running for about 6 months. A Schedule will
+be posted.
 
-On December 2, 2011, this I129 PETITION FOR A NONIMMIGRANT WORKER was approved and we sent you an e-mail notice. Please follow any instructions on the notice. If you move before you receive the notice, call customer service at 1-800-375-5283.
+Class members will read the section for the week and do the exercises
+at the end of the chapters. Relevant questions and comments may then
+be discussed on the mailing list; so you will need to join that in
+order to participate. See Mailing List page for information.
 
+We encourage you to introduce yourself on the list at the beginning of
+the class. If you don't begin until after October 19, join the list,
+introduce yourself and start with the first week's section. There is
+no rush to catch up to where others may be. You are free to discuss
+wherever you are in the guide or other Linux-related matters on the
+list.
 
-During this step the formal decision (approved/denied) is written and the decision notice is mailed and/or emailed to the applicant/petitioner. You can use our current processing time to gauge when you can expect to receive a final decision.
+How much does it cost? Basic requirements
 
+This course is free (as in free beer). However, a goodwill
+contribution in the form of active participation, revisions,
+suggestions or ideas would be appreciated.
 
+Basic requirements are a desire to learn, to do reasonable footwork
+(reading the material, googling the topics at times, gathering
+information on your own system), to respect fellow learners, and to
+follow netetiquette. This course being more specifically targeted to
+beginners, there aren't really that many requirements. However, keep
+in mind that questions will range from very basic to more advanced.
+Beginners will have to be bold and ask the questions they have at
+their level (there are no stupid questions) and not be intimidated by
+more advanced questions from more advanced users who are learning too.
+More advanced users will have to "remember when", as they once were
+introduced themselves to Linux, and hopefully contribute answers to
+basic questions as well as more advanced ones.
 
-If you have questions or concerns about your application or the case status results
+«You do not need to be a computer-wiz or a unix-guru to answer
+questions on the list. Sometimes it is enough to be just 5 minutes
+ahead of others to help them out.» (Quote from LBo -
+http://www.linuxbasics.org/mailinglist/start)
 
-listed above, or if you have not received a decision from USCIS within the current
+Revising the Guide
 
-processing time listed*, please contact USCIS Customer Service at (800) 375-5283.
-
-
-*Current processing times can be found on the USCIS website at www.uscis.gov under Check Processing Times.
-
-
-*** Please do not respond to this e-mail message.
+LBook along with all of LinuxBasics.org is on a wiki. If you wish to
+revise something, you may first need to check out You Can Help in the
+Help Section. You may also contribute by giving your suggestions and
+ideas to us on the mailing list or send them to
+TheCrew@LinuxBasics.org.
