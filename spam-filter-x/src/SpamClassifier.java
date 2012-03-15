@@ -39,7 +39,7 @@ public class SpamClassifier {
 	static Instances evaluationSet;
 
 	public static void main(String args[]) throws Exception {
-		String dataset = "d1";
+		String dataset = "d2";
 		FastVector trainingSet, testingSet;
 		SpamClassifier classifier = new SpamClassifier();
 		classifier.createTrainingSet(dataset + "\\training");
@@ -99,18 +99,19 @@ public class SpamClassifier {
 		System.out.println("**==" + modelName + "==**");
 		StringToWordVector stringToVector = new StringToWordVector(1000);
 		stringToVector.setInputFormat(trainingSet);
+		stringToVector.setOutputWordCounts(true);
 		stringToVector.setUseStoplist(false);
 		Instances filteredData = Filter.useFilter(trainingSet, stringToVector);
 		Instances filteredTestData = Filter.useFilter(testingSet,
 				stringToVector);
-
+		
 		// Classifier cModel = (Classifier) new NaiveBayes();
 		Classifier cModel = (Classifier) model;
 		cModel.buildClassifier(filteredData);
 		System.out.println(cModel);
 
 		Evaluation eTest = new Evaluation(filteredTestData);
-		eTest.evaluateModel(cModel, filteredTestData);
+		eTest.evaluateModel(cModel, filteredTestData);		
 		System.out.println(eTest.toSummaryString(true));
 		System.out.println(eTest.toClassDetailsString());
 		System.out.println(eTest.toMatrixString());
