@@ -44,7 +44,7 @@ public class SpamClassifier {
 	 * Begin here....
 	 */
 	public static void main(String args[]) throws Exception {
-		String dataset = "d2a";
+		String dataset = "d1a";
 		SpamClassifier classifier = new SpamClassifier();
 		classifier.createTrainingSet(dataset + "\\training");
 		classifier.createTestingSet(dataset + "\\testing");
