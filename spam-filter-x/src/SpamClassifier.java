@@ -20,6 +20,7 @@ import weka.classifiers.Classifier;
 import weka.classifiers.Evaluation;
 import weka.classifiers.bayes.NaiveBayes;
 import weka.classifiers.bayes.NaiveBayesMultinomial;
+import weka.classifiers.meta.AdaBoostM1;
 import weka.classifiers.trees.J48;
 import weka.core.Attribute;
 import weka.core.FastVector;
@@ -38,21 +39,22 @@ public class SpamClassifier {
 	static Instances trainingSet;
 	static Instances testingSet;
 	static Instances evaluationSet;
-	
+
 	/*
 	 * Begin here....
 	 */
 	public static void main(String args[]) throws Exception {
 		String dataset = "d2a";
-		FastVector trainingSet, testingSet;
 		SpamClassifier classifier = new SpamClassifier();
 		classifier.createTrainingSet(dataset + "\\training");
 		classifier.createTestingSet(dataset + "\\testing");
 
-		classifier.performClassification(new NaiveBayes(), "NAIVE BAYES");
-		// Other algorithms
-		classifier.performClassification(new J48(), "J48 (C4.5)");
 		classifier.performClassification(new NaiveBayesMultinomial(), "NAIVE BAYES MULTINOMIAL");
+
+		// Other algorithms
+		// classifier.performClassification(new NaiveBayes(), "NAIVE BAYES");
+		// classifier.performClassification(new J48(), "J48 (C4.5)");
+		// classifier.performClassification(new AdaBoostM1(), "ADA BOOST M1");
 	}
 
 	/*
@@ -106,34 +108,51 @@ public class SpamClassifier {
 
 	/**
 	 * Create the classification model and perform the classification.
+	 * 
 	 * @param model
 	 * @param modelName
 	 * @throws Exception
 	 */
-	private void performClassification(Object model, String modelName) throws Exception {
+	private void performClassification(Object model, String modelName)
+			throws Exception {
 		System.out.println("**==" + modelName + "==**");
 		StringToWordVector stringToVector = new StringToWordVector(1000);
 		stringToVector.setInputFormat(trainingSet);
 		stringToVector.setOutputWordCounts(true);
-		stringToVector.setUseStoplist(false);
 		Instances filteredData = Filter.useFilter(trainingSet, stringToVector);
-		Instances filteredTestData = Filter.useFilter(testingSet,
-				stringToVector);
-		
+
+		// For now, using only training set of 80 samples. 40 for spam and 40 for non-spam.		
+		// Instances filteredTestData = Filter.useFilter(testingSet, stringToVector);
+
 		// Classifier cModel = (Classifier) new NaiveBayes();
 		Classifier cModel = (Classifier) model;
 		cModel.buildClassifier(filteredData);
-		System.out.println(cModel);
 
-		Evaluation eTest = new Evaluation(filteredTestData);
-		eTest.evaluateModel(cModel, filteredTestData);		
+		// Print the predictions.
+		for (int i = 0; i < filteredData.numInstances(); i++) {
+			double pred = cModel.classifyInstance(filteredData.instance(i));
+			System.out.print("ID: " + filteredData.instance(i).value(0));
+			System.out.print(", actual: "
+					+ filteredData.classAttribute().value(
+							(int) filteredData.instance(i).classValue()));
+			System.out.println(", predicted: "
+					+ filteredData.classAttribute().value((int) pred));
+		}
+
+		// Print the model (lot of results)
+		//System.out.println(cModel);
+		
+		// Print other information, evaluation results.
+		Evaluation eTest = new Evaluation(filteredData);
+		eTest.evaluateModel(cModel, filteredData);
 		System.out.println(eTest.toSummaryString(true));
 		System.out.println(eTest.toClassDetailsString());
 		System.out.println(eTest.toMatrixString());
 	}
-	
+
 	/**
 	 * Reading the .txt files containing the data.
+	 * 
 	 * @param dataset
 	 * @throws IOException
 	 */
