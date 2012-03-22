@@ -36,6 +36,7 @@ public class ListLinks {
             print(" * %s <%s> (%s)", link.tagName(),link.attr("abs:href"), link.attr("rel"));
         }
 
+        
         print("\nLinks: (%d)", links.size());
         for (Element link : links) {
             print(" * a: <%s>  (%s)", link.attr("abs:href"), trim(link.text(), 35));
