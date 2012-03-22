@@ -13,8 +13,7 @@ import java.io.IOException;
  */
 public class ListLinks {
     public static void main(String[] args) throws IOException {
-        Validate.isTrue(args.length == 1, "usage: supply url to fetch");
-        String url = args[0];
+        String url = "http://www.google.com";
         print("Fetching %s...", url);
 
         Document doc = Jsoup.connect(url).get();
@@ -40,11 +39,12 @@ public class ListLinks {
         print("\nLinks: (%d)", links.size());
         for (Element link : links) {
             print(" * a: <%s>  (%s)", link.attr("abs:href"), trim(link.text(), 35));
+            System.out.println(link.text());
         }
     }
 
     private static void print(String msg, Object... args) {
-        System.out.println(String.format(msg, args));
+    	System.out.println(String.format(msg, args));
     }
 
     private static String trim(String s, int width) {
